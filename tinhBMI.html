@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+
+<body>
+    Nhập chiều cao: <input type="number" id="cc">
+    Nhập cân nặng: <input type="number" id="cn">
+    <button type="button" onclick="bmi()">Tính Chỉ Số</button>
+</body>
+<script>
+    function bmi() {
+        let chieucao = Number(document.getElementById("cc").value)
+        let cannang = Number(document.getElementById("cn").value)
+        let tinhchiso = cannang / (chieucao * chieucao)
+        console.log(tinhchiso)
+
+        if (tinhchiso < 16) {
+            document.write("Gầy độ III")
+        } else if
+            (tinhchiso < 17) {
+            document.write("Gầy độ II")
+        }
+        else if
+              (tinhchiso < 18) {
+            document.write("Gầy độ I")
+        }
+    }
+</script>
+
+</html>
