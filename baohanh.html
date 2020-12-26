@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số năm bảo hành</title>
+</head>
+
+<body>
+    <table>
+        <label>Vui lòng Nhập số KM: </label>
+        <input type="number" id="sokm"><br>
+        <label>Vui lòng nhập số năm đã mua: </label>
+        <input type="number" id="sonam"><br>
+        <button type="button" onclick="check()">Kiểm tra</button><br>
+        kết quả: <span id="ketqua"></span>
+    </table>
+</body>
+<script>
+    function check() {
+        let xemay = Number(document.getElementById("sokm").value);
+        let xechay = Number(document.getElementById("sonam").value);
+        if (xemay < 3000 && xechay < 3) {
+            document.getElementById("ketqua").innerHTML = "Có bảo hành"
+        } else {
+            document.getElementById("ketqua").innerHTML = 'Không bảo hành'
+        }
+    }
+</script>
+
+</html>
